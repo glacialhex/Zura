@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<?import javafx.scene.Cursor?>
+<HBox fx:id="request" alignment="CENTER" prefHeight="85.0" prefWidth="319.0" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group.app.RequestController">
+    <children>
+        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@img/user.png" />
+            </image>
+        </ImageView>
+        <Label fx:id="profileUsername1" text="Random User">
+            <HBox.margin>
+                <Insets left="10.0" />
+            </HBox.margin>
+            <font>
+                <Font name="System Bold" size="28.0" />
+            </font>
+        </Label>
+        <HBox alignment="CENTER" onMousePressed="#acceptRequest" prefHeight="27.0" prefWidth="70.0" style="-fx-background-color: #63F300;" styleClass="post-background">
+            <children>
+                <ImageView fitHeight="40.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@img/subway--tick.png" />
+                    </image>
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </HBox.margin>
+                </ImageView>
+            </children>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <HBox.margin>
+                <Insets bottom="20.0" left="50.0" right="20.0" top="20.0" />
+            </HBox.margin>
+        </HBox>
+        <HBox alignment="CENTER" layoutX="353.0" layoutY="30.0" onMousePressed="#rejectRequest" prefHeight="100.0" prefWidth="70.0" style="-fx-background-color: #F30000;" styleClass="post-background">
+            <children>
+                <ImageView fitHeight="40.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@img/maki--cross.png" />
+                    </image>
+                    <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </HBox.margin>
+                </ImageView>
+            </children>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <HBox.margin>
+                <Insets bottom="20.0" right="40.0" top="20.0" />
+            </HBox.margin>
+        </HBox>
+    </children>
+    <VBox.margin>
+        <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+    </VBox.margin>
+</HBox>

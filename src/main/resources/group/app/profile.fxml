@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="890.0" prefWidth="1160.0" style="-fx-background-color: #F0F2F5;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group.app.ProfileController">
+    <top>
+        <HBox prefHeight="65.0" prefWidth="200.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
+            <children>
+                <Label prefHeight="74.0" prefWidth="179.0" text="Zura">
+                    <HBox.margin>
+                        <Insets left="40.0" />
+                    </HBox.margin>
+                    <font>
+                        <Font name="System Bold Italic" size="50.0" />
+                    </font>
+                </Label>
+            </children>
+        </HBox>
+    </top>
+    <left>
+        <Pane prefHeight="825.0" prefWidth="317.0" BorderPane.alignment="CENTER">
+            <children>
+                <VBox prefHeight="200.0" prefWidth="319.0">
+                    <children>
+                        <HBox alignment="CENTER" prefHeight="85.0" prefWidth="319.0">
+                            <children>
+                                <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@img/user.png" />
+                                    </image>
+                                </ImageView>
+                                <Label fx:id="hello" text="Random User">
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                    <font>
+                                        <Font name="System Bold" size="28.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER" layoutX="10.0" layoutY="20.0" prefHeight="85.0" prefWidth="319.0">
+                            <children>
+                                <Label fx:id="bio" text="This is my bio!">
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                    <font>
+                                        <Font name="System Italic" size="20.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets top="10.0" />
+                            </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="50.0" layoutY="170.0" onMousePressed="#goHome" prefHeight="85.0" prefWidth="319.0" styleClass="post-background">
+                            <children>
+                                <ImageView fitHeight="40.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@img/fluent--news-20-regular.png" />
+                                    </image>
+                                    <HBox.margin>
+                                        <Insets bottom="5.0" left="5.0" top="5.0" />
+                                    </HBox.margin>
+                                </ImageView>
+                                <Label text="News Feed">
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <VBox.margin>
+                                <Insets left="40.0" top="10.0" />
+                            </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="165.0" onMousePressed="#goToFriends" prefHeight="85.0" prefWidth="319.0" styleClass="post-background">
+                            <children>
+                                <ImageView fitHeight="40.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@img/tabler--friends.png" />
+                                    </image>
+                                    <HBox.margin>
+                                        <Insets bottom="5.0" left="5.0" top="5.0" />
+                                    </HBox.margin>
+                                </ImageView>
+                                <Label text="My Friends">
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                        <Label fx:id="numPendingRequests" layoutX="65.0" layoutY="22.0" textFill="#e40000">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="5.0" />
+                           </HBox.margin>
+                        </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets left="40.0" top="10.0" />
+                            </VBox.margin>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="60.0" layoutY="120.0" onMousePressed="#goToMyProfile" prefHeight="85.0" prefWidth="319.0" styleClass="post-background">
+                            <children>
+                                <ImageView fitHeight="40.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@img/user.png" />
+                                    </image>
+                                    <HBox.margin>
+                                        <Insets bottom="5.0" left="5.0" top="5.0" />
+                                    </HBox.margin>
+                                </ImageView>
+                                <Label text="My Profile">
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets left="40.0" top="10.0" />
+                            </VBox.margin>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </HBox>
+                  <HBox alignment="CENTER_LEFT" layoutX="50.0" layoutY="290.0" onMousePressed="#goToEditProfile" prefHeight="85.0" prefWidth="319.0" styleClass="post-background">
+                     <children>
+                        <ImageView fitHeight="40.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@img/ic--outline-edit.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets bottom="5.0" left="5.0" top="5.0" />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label text="Edit Profile">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <VBox.margin>
+                        <Insets left="40.0" top="10.0" />
+                     </VBox.margin>
+                  </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="200.0" onMousePressed="#logout" prefHeight="85.0" prefWidth="319.0" styleClass="post-background">
+                            <children>
+                                <ImageView fitHeight="40.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@img/mdi--logout.png" />
+                                    </image>
+                                    <HBox.margin>
+                                        <Insets bottom="5.0" left="5.0" top="5.0" />
+                                    </HBox.margin>
+                                </ImageView>
+                                <Label text="Log Out">
+                                    <HBox.margin>
+                                        <Insets left="10.0" />
+                                    </HBox.margin>
+                                    <font>
+                                        <Font name="System Bold" size="18.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                            <VBox.margin>
+                                <Insets left="40.0" top="10.0" />
+                            </VBox.margin>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </Pane>
+    </left>
+    <center>
+        <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <children>
+                <Pane prefHeight="825.0" prefWidth="232.0" />
+                <ScrollPane prefHeight="817.0" prefWidth="742.0" style="-fx-background-color: transparent;">
+                    <content>
+                        <VBox fx:id="postsContainer" prefWidth="583.0">
+                            <children>
+                                <VBox alignment="TOP_CENTER" prefHeight="265.0" prefWidth="501.0" styleClass="post-background">
+                                    <VBox.margin>
+                                        <Insets top="15.0" />
+                                    </VBox.margin>
+                           <children>
+                              <HBox alignment="CENTER" prefHeight="85.0" prefWidth="319.0">
+                                 <children>
+                                    <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@img/user.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="profileUsername" text="Random User">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="28.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets top="30.0" />
+                                 </VBox.margin>
+                              </HBox>
+                              <Label fx:id="profileBio" text="This is my bio!">
+                                 <font>
+                                    <Font name="System Italic" size="20.0" />
+                                 </font>
+                              </Label>
+                              <HBox fx:id="addFriendPanel" alignment="CENTER_LEFT" minHeight="-Infinity" minWidth="-Infinity" onMousePressed="#addFriend" prefHeight="64.0" prefWidth="483.0" style="-fx-background-color: E4E4E4;" styleClass="post-background">
+                                 <children>
+                                    <ImageView fx:id="addFriendIcon" fitHeight="40.0" fitWidth="58.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@img/fluent-mdl2--add-friend.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <Label fx:id="addFriendText" text="Add Friend">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <VBox.margin>
+                                    <Insets left="50.0" right="50.0" top="10.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                                </VBox>
+                                <Pane prefHeight="1.0" prefWidth="501.0" style="-fx-background-color: #000;">
+                                    <VBox.margin>
+                                        <Insets bottom="20.0" top="20.0" />
+                                    </VBox.margin>
+                                </Pane>
+                                <VBox layoutX="10.0" layoutY="20.0" prefHeight="65.0" prefWidth="503.0">
+                                    <children>
+                                        <HBox prefHeight="150.0" prefWidth="503.0" style="-fx-background-color: transparent;">
+                                            <children>
+                                                <Label text="Posts">
+                                                    <font>
+                                                        <Font name="System Bold" size="29.0" />
+                                                    </font>
+                                                    <HBox.margin>
+                                                        <Insets left="10.0" />
+                                                    </HBox.margin>
+                                                </Label>
+                                            </children>
+                                        </HBox>
+                                        <HBox alignment="BASELINE_CENTER" prefHeight="0.0" prefWidth="501.0" />
+                                    </children>
+                                </VBox>
+                            </children>
+                        </VBox>
+                    </content>
+                    <padding>
+                        <Insets left="10.0" right="10.0" />
+                    </padding>
+                </ScrollPane>
+                <Pane prefHeight="825.0" prefWidth="267.0" />
+            </children>
+        </HBox>
+    </center>
+</BorderPane>

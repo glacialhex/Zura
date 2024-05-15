@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<HBox fx:id="comment" alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="60.0" spacing="10.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/21" fx:controller="group.app.CommentController">
+    <children>
+        <ImageView fx:id="imgProfile1" fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@img/user.png" />
+            </image>
+        </ImageView>
+        <VBox alignment="CENTER" onMousePressed="#onProfileClicked" prefHeight="60.0">
+            <children>
+                <HBox alignment="CENTER_LEFT">
+                    <children>
+                        <Label fx:id="commentUsername" text="John Doe">
+                            <font>
+                                <Font name="Segoe UI Semibold" size="18.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets top="10.0" />
+                            </HBox.margin>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_LEFT">
+                    <children>
+                        <Label fx:id="commentDate" text="Date here" textFill="#616770">
+                            <font>
+                                <Font name="Segoe UI Historic" size="15.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
+        <Label fx:id="commentContent" text="Label">
+            <font>
+                <Font name="Segoe UI" size="22.0" />
+            </font>
+        </Label>
+    </children>
+    <padding>
+        <Insets left="20.0" right="20.0" />
+    </padding>
+</HBox>
